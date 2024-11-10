@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Fuji-Kenya</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Favicon -->
+        <link href="img/vgc.png" rel="icon">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar d-none d-xl-block w-100">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-6 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="https://maps.app.goo.gl/zPwmSEoAbZkUPB3Q8" class="text-muted me-4" target="_blank"><i class="fas fa-map-marker-alt text-secondary me-2"></i>Find Us</a>
+                        <a href="tel:+254703700766" class="text-muted me-4"><i class="fas fa-phone-alt text-secondary me-2"></i>+254703700766</a>
+                        <a href="mailto:info@fujikenya.co.ke" class="text-muted me-0"><i class="fas fa-envelope text-secondary me-2"></i>info@fujikenya.co.ke</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="#" class="text-muted me-3"><i class="fas fa-clock text-secondary me-2"></i>Mon - Fri 8:30 - 17:30, Sat 8:30 - 13:00,</a>
+                        <a href="#" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid sticky-top px-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="img/favicon.png" alt="Logo" height="50px" width="220px"> 
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto pt-2 pt-lg-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <div class="nav-item dropdown">
+                        <a href="products.html" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Products & Services</a>
+                        <div class="dropdown-menu m-lg-0">
+                            <a href="surgical_imaging.html" class="dropdown-item">Surgical Imaging</a>
+                            <a href="diagnostics_imaging.html" class="dropdown-item">Diagnostics Imaging</a>
+                            <a href="enterprise_imaging.html" class="dropdown-item">Enterprise Imaging</a>
+                            <a href="services_support.html" class="dropdown-item">After Sales Support</a>
+                        </div>
+                    </div>
+                    <a href="project.html" class="nav-item nav-link">Projects</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-flex align-items-center flex-nowrap pt-3 pt-lg-0 ms-lg-2">
+                    <form class="d-flex" id="searchForm">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                        <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                        <div id="suggestions" class="list-group position-absolute" style="top: 100%; left: 500; z-index: 10; display: none; width: 200px;"></div>
+
+                    </form>
+                    <a href="quote.html" class="btn btn-secondary py-2 px-4 ms-3 flex-wrap flex-sm-shrink-0" target="_blank">Get a Quote</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h4 class="modal-title mb-0" id="exampleModalLabel">Search by keyword</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+        <!-- Carousel Start -->
+        <div class="container-fluid overflow-hidden px-0">
+            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1s" style="animation-delay: 1s;">
+                    <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+                    <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                    <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="First slide"/>
+                        <div class="carousel-caption">
+                            <p class="text-uppercase text-secondary fs-4 mb-0 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1s" style="animation-delay: 1s;">Healthcare Solutions</p>
+                            <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.3s" style="animation-delay: 1.3s;">Innovating for a healthier World.</h1>
+                            <p class="mb-5 fs-5 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.5s;">Our extensive healthcare portfolio is strategically designed to support stakeholders across the care continuum.  
+                            </p>
+                            <div class="d-flex justify-content-center">
+                                <!-- <a class="btn btn-primary d-flex py-3 px-5 me-2 flex-shrink-0 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="quote.html">Request a Quote</a> -->
+                                <a class="btn btn-secondary d-inline-block py-3 px-5 ms-2 flex-shrink-0 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="about.html">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/carousel-1.jpg" class="img-fluid w-100" alt="Second slide"/>
+                        <div class="carousel-caption">
+                            <p class="text-uppercase text-secondary fs-4 mb-0 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1s" style="animation-delay: 1s;">Top-quality medical equipment</p>
+                            <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.3s" style="animation-delay: 1.3s;">Your Trusted Partner in Medical Equipments</h1>
+                            <p class="mb-5 fs-5 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.5s;">We understand that healthcare providers need reliable, cutting-edge equipment to deliver the best possible care to their patients, 
+                            </p>
+                            <div class="d-flex justify-content-center">
+                                <!-- <a class="btn btn-primary d-flex py-3 px-5 me-2 flex-shrink-0 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="quote.html">Request a Quote</a> -->
+                                <a class="btn btn-secondary d-inline-block py-3 px-5 ms-2 flex-shrink-0 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="about.html">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/carousel-3.jpg.png" class="img-fluid w-100" alt="Third slide"/>
+                        <div class="carousel-caption">
+                            <p class="text-uppercase text-secondary fs-4 mb-0 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1s" style="animation-delay: 1s;">Expert Engineers and Support</p>
+                            <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.3s" style="animation-delay: 1.3s;">Exceptional after-sale support.</h1>
+                            <p class="mb-5 fs-5 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.5s;">Whether you need technical assistance, product training, or help with equipment maintenance, we’re just a call or click away, 
+                            </p>
+                            <div class="d-flex justify-content-center">
+                                <!-- <a class="btn btn-primary d-flex py-3 px-5 me-2 flex-shrink-0 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="quote.html">Request a Quote</a> -->
+                                <a class="btn btn-secondary d-inline-block py-3 px-5 ms-2 flex-shrink-0 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="about.html">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon btn-lg-square fadeInLeft animate__animated" aria-hidden="true" data-animation="fadeInLeft" data-delay="1.1s" style="animation-delay: 1.3s;"><i class="fas fa-chevron-left fa-2x"></i></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                    <span class="carousel-control-next-icon btn-lg-square fadeInRight animate__animated" aria-hidden="true" data-animation="fadeInRight" data-delay="1.1s" style="animation-delay: 1.3s;"><i class="fas fa-chevron-right fa-2x"></i></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- Carousel End -->
+
+        <!-- About Start -->
+        <div class="container-fluid about py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.1s">
+                        <div class="about-item-image d-flex">
+                            <img src="img/about.jpg" class="img-1 img-fluid w-50"  alt="">
+                            <img src="img/about-3.jpg" class="img-2 img-fluid w-50"  alt="">
+                            <div class="about-item-image-content">
+                                <img src="img/DiagnosticImaging_FDRGoPlus.png" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.1s">
+                        <div class="about-item-content">
+                            <p class="text-uppercase text-secondary fs-5 mb-0">WELCOME TO FUJI KENYA</p>
+                            <h2 class="display-4 text-capitalize mb-3">Your Partner in Modern Medical Technology</h2>
+                            <p class="mb-4 fs-5">Fuji Kenya is a leading provider of medical equipment, serving hospitals, clinics, and healthcare providers in East Africa. Our team of experts brings years of experience in the medical field, ensuring that our clients receive the best products and services.
+                            </p>
+                            <div class="pb-4 mb-4 border-bottom">
+                                <div class="row g-4">
+                                    <div class="col-lg-4">
+                                        <div class="about-item-content-img">
+                                            <img src="img/about-2.jpg" class="img-fluid w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="d-flex mb-4">
+                                            <div class="text-secondary">
+                                                <i class="fas fa-user-shield fa-3x"></i>
+                                            </div>
+                                            <h4 class="ms-3">Installing quality standards</h4>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="text-secondary">
+                                                <i class="fas fa-users-cog fa-3x"></i>
+                                            </div>
+                                            <h4 class="ms-3">Certified engineer’s team</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gy-0 gx-4 justify-content-between pb-4">
+                                <div class="col-lg-6">
+                                    <p class="text-dark"><i class="fas fa-check text-secondary me-1"></i> 100% Satisfaction</p>
+                                    <p class="text-dark"><i class="fas fa-check text-secondary me-1"></i> Professional Employees</p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <p class="text-dark"><i class="fas fa-check text-secondary me-1"></i> Annual Pass Programs</p>
+                                    <p class="text-dark mb-0"><i class="fas fa-check text-secondary me-1"></i> Flexible and cost effective</p>
+                                </div>
+                            </div>
+                            <a class="btn btn-secondary d-inline-block py-3 px-5 me-2 flex-shrink-0 wow fadeInUp" data-wow-delay="0.1s" href="about.html" target="_blank">More About Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- Features Start -->
+        <div class="container-fluid feature bg-light py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <p class="text-uppercase text-secondary fs-5 mb-0">WHy US</p>
+                    <h2 class="display-4 text-capitalize mb-3">Why Choose Us</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="feature-item text-center border p-5">
+                            <div class="feature-img bg-secondary d-inline-flex p-4">
+                                <i class="fas fa-tools text-primary fa-5x"></i>
+                            </div>
+                            <a href="#" class="h4 d-block my-4">Expert Engineer</a>
+                            <p class="mb-0">Our team is comprised of professionals with extensive knowledge of medical innovative technology.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="feature-item text-center border p-5">
+                            <div class="feature-img bg-secondary d-inline-flex p-4">
+                                <i class="fas fa-funnel-dollar text-primary fa-5x"></i>
+                            </div>
+                            <a href="#" class="h4 d-block my-4">Quality Assurance</a>
+                            <p class="mb-0">We source equipment from reputable manufacturers known for their quality and innovation.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="feature-item text-center border p-5">
+                            <div class="feature-img bg-secondary d-inline-flex p-4">
+                                <i class="fas fa-users text-primary fa-5x"></i>
+                            </div>
+                            <a href="#" class="h4 d-block my-4">Customer Focus</a>
+                            <p class="mb-0">We prioritize your needs and provide personalized service to ensure your satisfaction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Features End -->
+
+
+        <!-- Products Start -->
+        <div class="container-fluid service bg-light pb-5">
+            <div class="container pb-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <p class="text-uppercase text-secondary fs-5 mb-0">Our Products</p>
+                    <h2 class="display-4 text-capitalize mb-3">Innovative & Advanced</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/endoluminal_surgery2.jpg" class="img-fluid w-100" alt="Image">
+                            </div>
+                            <div class="service-content text-center p-4">
+                                <a href="surgical_imaging.html" class="d-block fs-4 my-4">Surgical Imaging</a>
+                                <p class="text-white mb-4">Innovative solutions for diagnosis & surgical planning!</p>
+                                <a class="btn btn-secondary py-2 px-4" href="surgical_imaging.html">Read More</a>
+                            </div>
+                            <div class="service-tytle">
+                                <div class="d-flex align-items-center justify-content-start ps-4 w-100">
+                                    <h4>Surgical Imaging</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/diagnostic-imaging-header.jpg" class="img-fluid w-100" alt="Image">
+                            </div>
+                            <div class="service-content text-center p-4">
+                                <a href="diagnostics_imaging.html" class="d-block fs-4 my-4">Diagnostic Imaging</a>
+                                <p class="text-white mb-4">Powerful solutions transforming patient care!</p>
+                                <a class="btn btn-secondary py-2 px-4" href="diagnostics_imaging.html">Read More</a>
+                            </div>
+                            <div class="service-tytle">
+                                <div class="d-flex align-items-center ps-4 w-100">
+                                    <h4>Diagnostic Imaging</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/synapse.jpg" class="img-fluid w-100" alt="Image">
+                            </div>
+                            <div class="service-content text-center p-4">
+                                <a href="enterprise_imaging.html" class="d-block fs-4 my-4">Enterprise Imaging</a>
+                                <p class="text-white mb-4">Bring cloud-hosted, tailored user experiences to stakeholders across the enterprise!</p>
+                                <a class="btn btn-secondary py-2 px-4" href="enterprise_imaging.html">Read More</a>
+                            </div>
+                            <div class="service-tytle">
+                                <div class="d-flex align-items-center justify-content-start ps-4 w-100">
+                                    <h4>Enterprise Imaging</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
+                        <a class="btn btn-secondary py-3 px-5 mt-4" href="products.html">More Products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Products End -->
+
+        <!-- Fact Counter -->
+        <div class="container-fluid counter py-5">
+            <div class="container py-5">
+                <div class="row g-4">
+                    <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="counter-box">
+                            <div class="counter-item">
+                                <div class="counter-item-style"></div>
+                                <div class="counter-item-inner p-5">
+                                    <i class="fas fa-thumbs-up fa-4x text-secondary"></i>
+                                    <h4 class="text-dark my-4">Completed Projects</h4>
+                                    <div class="counter-counting">
+                                        <span class="text-secondary fs-2 fw-bold" data-toggle="counter-up">206</span>
+                                        <span class="h1 fw-bold text-secondary">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="counter-box">
+                            <div class="counter-item">
+                                <div class="counter-item-style"></div>
+                                <div class="counter-item-inner p-5">
+                                    <i class="fas fa-users fa-4x text-secondary"></i>
+                                    <h4 class="text-dark my-4">Happy Customers</h4>
+                                    <div class="counter-counting">
+                                        <span class="text-secondary fs-2 fw-bold" data-toggle="counter-up">213</span>
+                                        <span class="h1 fw-bold text-secondary">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="counter-box">
+                            <div class="counter-item">
+                                <div class="counter-item-style"></div>
+                                <div class="counter-item-inner p-5">
+                                    <i class="fas fa-user fa-4x text-secondary"></i>
+                                    <h4 class="text-dark my-4">Qualified Engineers</h4>
+                                    <div class="counter-counting">
+                                        <span class="text-secondary fs-2 fw-bold" data-toggle="counter-up">11</span>
+                                        <span class="h1 fw-bold text-secondary">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="counter-box">
+                            <div class="counter-item">
+                                <div class="counter-item-style"></div>
+                                <div class="counter-item-inner p-5">
+                                    <i class="fas fa-heart fa-4x text-secondary"></i>
+                                    <h4 class="text-dark my-4">Years Experiance</h4>
+                                    <div class="counter-counting">
+                                        <span class="text-secondary fs-2 fw-bold" data-toggle="counter-up">85</span>
+                                        <span class="h1 fw-bold text-secondary">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center pt-4 wow fadeInUp" data-wow-delay="0.9s">
+                        <a class="counter-btn btn btn-secondary py-3 px-5" href="contact.html">Join With Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fact Counter -->
+
+        <!-- Projects Start -->
+        <div class="container-fluid project py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <p class="text-uppercase text-secondary fs-5 mb-0">Our Projects</p>
+                    <h2 class="display-4 text-capitalize mb-3">Recent Completed Projects</h2>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="project-item">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="project-img">
+                                        <img src="img/supria_ct_baringo_county.jpg" class="img-fluid w-100 pt-3 ps-3" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="project-content mb-4">
+                                        <p class="fs-5 text-secondary mb-2">Baringo County Hospital</p>
+                                        <a href="#" class="h4">CT Scan Installation</a>
+                                        <p class="mb-0 mt-3">Baringo County Hospital has recently enhanced its medical imaging capabilities with the installation of a state-of-the-art <a href="https://healthcaresolutions-us.fujifilm.com/products/diagnostic-imaging/ct/supria-plus/" target="_blank">Supria PLUS CT</a>scanner.</p>
+                                    </div>
+                                    <a class="btn btn-primary py-2 px-4" href="https://healthcaresolutions-us.fujifilm.com/products/diagnostic-imaging/ct/supria-plus/" target="_blank">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="project-item">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="project-img">
+                                        <img src="img/Echelon-Synergy-glamour_850x520-2.jpg" class="img-fluid w-100 pt-3 ps-3" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="project-content mb-4">
+                                        <p class="fs-5 text-secondary mb-2">Rayhaan Healthcare</p>
+                                        <a href="#" class="h4">MRI Installation</a>
+                                        <p class="mb-0 mt-3">Rayhaan Healthcare Hospital has recently procured <a href="https://healthcaresolutions-us.fujifilm.com/products/diagnostic-imaging/mri/echelon-synergy/" target="_blank">1.5T ECHELON MRI</a>, Fujifilm’s Deep Learning Reconstruction powered by Ai, enhancing its diagnostic capabilities.</p>
+                                    </div>
+                                    <a class="btn btn-primary py-2 px-4" href="https://healthcaresolutions-us.fujifilm.com/products/diagnostic-imaging/mri/echelon-synergy/" target="_blank">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="project-item">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="project-img">
+                                        <img src="img/DiagnosticImaging_FDRGoPlus2.jpg" class="img-fluid w-100 pt-3 ps-3" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="project-content mb-4">
+                                        <p class="fs-5 text-secondary mb-2">Nairobi Hospital</p>
+                                        <a href="#" class="h4">Mobile X-ray Installation</a>
+                                        <p class="mb-0 mt-3">Nairobi Hospital has recently upgraded its diagnostic imaging capabilities with the installation of a state-of-the-art Mobile X-ray scanner.</p>
+                                    </div>
+                                    <a class="btn btn-primary py-2 px-4" href="https://healthcaresolutions-us.fujifilm.com/products/diagnostic-imaging/digital-radiography/mobile-dr-systems/fdr-go-plus/" target="_blank">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="project-item">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="project-img">
+                                        <img src="img/thumb_fdr-xair.jpg" class="img-fluid w-100 pt-3 ps-3" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="project-content mb-4">
+                                        <p class="fs-5 text-secondary mb-2">Bomu Hospital</p>
+                                        <a href="#" class="h4">Digital X ray machine</a>
+                                        <p class="mb-0 mt-3">Ultralight, compact, battery-powered and portable digital X ray, <a href="https://www.fujifilm.com/uk/en/healthcare/x-ray/portable-x-ray/fdr-xair" target="_blank">Fujifilm FDR Xair</a>, that facilitates successful diagnoses in various medical settings.</p>
+                                    </div>
+                                    <a class="btn btn-primary py-2 px-4" href="https://www.fujifilm.com/uk/en/healthcare/x-ray/portable-x-ray/fdr-xair" target="_blank">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
+                        <a class="btn btn-secondary py-3 px-5" href="products.html">More Products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Projects End -->
+
+        <!-- Testimonial Start -->
+        <div class="container-fluid testimonial pb-5">
+            <div class="container pb-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <p class="text-uppercase text-secondary fs-5 mb-0">Testimonials</p>
+                    <h2 class="display-4 text-capitalize mb-3">Our clients reviews.</h2>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="testimonial-item bg-light p-4">
+                        <div class="position-relative">
+                            <i class="fa fa-quote-right fa-2x text-primary position-absolute" style="bottom: 30px; right: 0;"></i>
+                            <div class="mb-4 pb-4 border-bottom border-secondary">
+                                <p class="mb-0">"We recently acquired advanced medical equipment from Fuji Kenya, and the experience has been exceptional. We highly recommend Fuji Kenya for their reliability and dedication to advancing healthcare." 
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center flex-nowrap">
+                                <div class="me-4">
+                                    <img src="img/tnh_logo.jpeg" class="img-fluid w-100" style="width: 100px; height: 100px;" alt="">
+                                </div>
+                                <div class="d-block">
+                                    <h4 class="text-dark">Dr. John Mwangi</h4>
+                                    <p class="m-0 pb-3">Chief Medical Officer, Nairobi General Hospital</p>
+                                    <div class="d-flex text-secondary pe-5">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light p-4">
+                        <div class="position-relative">
+                            <i class="fa fa-quote-right fa-2x text-primary position-absolute" style="bottom: 30px; right: 0;"></i>
+                            <div class="mb-4 pb-4 border-bottom border-secondary">
+                                <p class="mb-0">"Fuji Kenya has transformed our practice with their state-of-the-art medical equipment. Their support extends beyond the sale, ensuring we deliver the best care to our patients." 
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center flex-nowrap">
+                                <div class="me-4">
+                                    <img src="img/mbs_hosp_logo.jpeg" class="img-fluid w-100" style="width: 100px; height: 100px;" alt="">
+                                </div>
+                                <div class="d-block">
+                                    <h4 class="text-dark">Dr. Aisha Njeri</h4>
+                                    <p class="m-0 pb-3">Head of Radiology, Mombasa Medical Center</p>
+                                    <div class="d-flex text-secondary pe-5">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star text-muted"></i>
+                                        <i class="fas fa-star text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light p-4">
+                        <div class="position-relative">
+                            <i class="fa fa-quote-right fa-2x text-primary position-absolute" style="bottom: 30px; right: 0;"></i>
+                            <div class="mb-4 pb-4 border-bottom border-secondary">
+                                <p class="mb-0">"Our partnership with Fuji Kenya has been instrumental in modernizing our medical facilities. Fuji Kenya's team is always available to assist with any inquiries, ensuring we maintain optimal performance in our operations."
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center flex-nowrap">
+                                <div class="me-4">
+                                    <img src="img/ksm_logo.jpeg" class="img-fluid w-100" style="width: 100px; height: 100px;" alt="">
+                                </div>
+                                <div class="d-block">
+                                    <h4 class="text-dark">Dr. Samuel Otieno</h4>
+                                    <p class="m-0 pb-3">Director of Cardiology, Kisumu Heart Institute</p>
+                                    <div class="d-flex text-secondary pe-5">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <div class="footer-item">
+                                <h4 class="text-white mb-4">Newsletter</h4>
+                                <p class="mb-3">Subscribe to our newsletter and never miss an update!</p>
+                                <div class="position-relative mx-auto">
+                                    <form id="DA-Formmaker-Form" action="https://www.ekiwi-scripts.de/form/v4/formmail_v4.php" class="w3-container" method="POST" name="DAFORM" onSubmit="SetCookies();return chkFormular();" enctype="multipart/form-data" target="_blank">
+                                        <input type="hidden" name="formid" value="827021">
+                                        <input type="hidden" name="settings" value="cXZ7ZHJrY2Vicg==">
+                                        <input type="hidden" name="redirect" value="https://healthcaresolutions-us.fujifilm.com/">
+                                        <input type="hidden" name="subject" value="Subscribe me">
+                                        <input type="hidden" name="admin" value="cWV2eXR+ZDlgdnl9fnxiV3pyc35jcnRkbmRjcnpkOXlyYw==">
+                                        <input type="hidden" name="admin1" value="">
+                                        <input type="hidden" name="admin2" value="">
+                                        <input type="hidden" name="typemail" value="html">
+                                        <input type="hidden" name="crypt" value="1">
+                                        <input type="hidden" name="conf_csv" value="0">
+                                        <input type="hidden" name="conf_csv2" value="0">
+                                        <input type="hidden" name="einleittext" value="">
+                                        <input type="hidden" name="conf_MailtextEnd" value="">
+                                        <input type="hidden" name="copyfields" value="-1">
+                                        <input type="hidden" name="copyip" value="-1">
+                                        <input type="hidden" name="hide_empty_fields" value="0">
+                                        <input type="hidden" name="settings_encoding" value="utf-8">  
+                                        <input type="hidden" name="conf_pdf" value="0">    
+                                        <input type="hidden" name="conf_lang" value="en">
+                                        <input type="hidden" name="ReturnToSender" value="0">
+                                         <input type="hidden" name="label__First_Name" value="Rmlyc3QgTmFtZQ==">
+                                         <input type="hidden" name="label__Last_Name" value="TGFzdCBOYW1l">
+                                         <input type="hidden" name="label__Email" value="RU1haWwgYWRkcmVzcw==">
+                                         <input type="hidden" name="label__Subject" value="U3ViamVjdA==">
+                                         <input type="hidden" name="label__Message" value="WW91ciBNZXNzYWdl">
+                                        <input type="hidden" name="conf_copy_attachments" value="0">
+                                        
+                                        <input class="form-control w-100 py-3 ps-4 pe-5"  type="email" name="Email" id="Email" value="" class="form-control" id="email" placeholder="Your Email" maxLength="200" required oninvalid="this.setCustomValidity('Please enter your email address so that we can contact you.')">
+                                       
+                                        <button class="btn btn-secondary position-absolute top-0 end-0 py-2 mt-2 me-2">Sign Up</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Explore</h4>
+                            <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                            <a href="products.html"><i class="fas fa-angle-right me-2"></i> Products</a>
+                            <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                            <a href="project.html"><i class="fas fa-angle-right me-2"></i> Latest Projects</a>
+                            <a href="testimonial.html"><i class="fas fa-angle-right me-2"></i> testimonial</a>
+                            <a href="quote.html"><i class="fas fa-angle-right me-2"></i> Get Quote</a>
+                            <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Our Services</h4>
+                            <a href="surgical_imaging.html"><i class="fas fa-angle-right me-2"></i> surgical Imaging</a>
+                            <a href="diagnostics_imaging.html"><i class="fas fa-angle-right me-2"></i> Diagnostic Imaging</a>
+                            <a href="ct.html"><i class="fas fa-angle-right me-2"></i> CT Scanners</a>
+                            <a href="digital_radiography.html"><i class="fas fa-angle-right me-2"></i> Digital Radiography</a>
+                            <a href="enterprise_imaging.html"><i class="fas fa-angle-right me-2"></i> Enterprise Imaging</a>
+                            <a href="ultrasound.html"><i class="fas fa-angle-right me-2"></i> Ultrasounds</a>
+                            <a href="services_support.html"><i class="fas fa-angle-right me-2"></i> After Sale Services</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Contact Info</h4>
+                            <a href="https://maps.app.goo.gl/6UvvXM6BTvk3Kpvn7" target="_blank"><i class="fa fa-map-marker-alt me-2"></i> House of Vanguard, Westlands</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> info@fujikenya.co.ke</a>
+                            <a href="index.html"><i class="fas fa-globe me-2"></i> www.fujikenya.co.ke</a>
+                            <a href="tel:+254703700766" target="_blank"><i class="fas fa-phone me-2"></i> +254 703 700 766</a>
+                            <a href="tel:+254733512802" target="_blank" class="mb-3"><i class="fas fa-print me-2"></i> +254 733 512 802</a>
+                            <div class="footer-btn d-flex align-items-center">
+                                <a class="btn btn-secondary btn-md-square me-2" href=""><i class="fab fa-facebook-f text-white"></i></a>
+                                <a class="btn btn-secondary btn-md-square me-2" href=""><i class="fab fa-twitter text-white"></i></a>
+                                <a class="btn btn-secondary btn-md-square me-2" href=""><i class="fab fa-instagram text-white"></i></a>
+                                <a class="btn btn-secondary btn-md-square me-0" href=""><i class="fab fa-linkedin-in text-white"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Fuji Kenya</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-body">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        2024 <a class="border-bottom text-white" href="https://htmlcodex.com">@</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-secondary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+        <!-- Search Functionality -->
+        <script>
+            document.getElementById('searchForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+                navigateToFirstResult(searchTerm);
+            });
+        
+            document.getElementById('searchInput').addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                showSuggestions(searchTerm);
+            });
+        
+            const pages = [
+                { title: 'Home', url: 'index.html' },
+                { title: 'About', url: 'about.html' },
+                { title: 'Products & Services', url: 'products.html' },
+                { title: 'Surgical Imaging', url: 'surgical_imaging.html' },
+                { title: 'Diagnostics Imaging', url: 'diagnostics_imaging.html' },
+                { title: 'Enterprise Imaging', url: 'enterprise_imaging.html' },
+                { title: 'After Sales Support', url: 'services_support.html' },
+                { title: 'Projects', url: 'project.html' },
+                { title: 'Contact', url: 'contact.html' },
+                { title: 'Get a Quote', url: 'quote.html' }
+            ];
+        
+            function showSuggestions(searchTerm) {
+                const suggestionsContainer = document.getElementById('suggestions');
+                suggestionsContainer.innerHTML = '';
+                
+                const matchingPages = pages.filter(page => page.title.toLowerCase().includes(searchTerm));
+                
+                if (matchingPages.length > 0 && searchTerm !== '') {
+                    suggestionsContainer.style.display = 'block';
+                    matchingPages.forEach(page => {
+                        const suggestionItem = document.createElement('a');
+                        suggestionItem.href = page.url;
+                        suggestionItem.className = 'list-group-item list-group-item-action';
+                        suggestionItem.textContent = page.title;
+                        suggestionsContainer.appendChild(suggestionItem);
+                    });
+                } else {
+                    suggestionsContainer.style.display = 'none';
+                }
+            }
+        
+            function navigateToFirstResult(searchTerm) {
+                const results = pages.filter(page => page.title.toLowerCase().includes(searchTerm));
+                if (results.length > 0) {
+                    window.location.href = results[0].url;
+                } else {
+                    alert('No results found. Please try a different search term.');
+                }
+            }
+        
+            document.addEventListener('click', function(e) {
+                if (!document.getElementById('searchForm').contains(e.target)) {
+                    document.getElementById('suggestions').style.display = 'none';
+                }
+            });
+        </script>
+    </body>
+
+</html>
