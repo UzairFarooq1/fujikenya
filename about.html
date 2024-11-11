@@ -32,6 +32,258 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+<style>
+    /* Primary Colors */
+:root {
+    --primary: #3fb559;
+    --dark-primary: #309f39;
+    --light-primary: #C5CAE9;
+    --text: #FFFFFF;
+    --primary-text: #212121;
+    --secondary-text: #757575;
+    --accent: #FF4081;
+  }
+  
+  section {
+    padding: 100px 0;
+  }
+  
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  /* Timeline Header */
+  .timeline h1 {
+    font-size: 200%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+  }
+  
+  .timeline header {
+    background: var(--primary);
+    color: var(--text);
+    padding: 150px 0;
+    text-align: center;
+  }
+  
+  .timeline header p {
+    font-family: 'Allura';
+    color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 0;
+    font-size: 60px;
+    margin-top: -30px;
+  }
+  
+  /* Timeline container and background */
+  .timeline {
+    position: relative;
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: 400;
+    background-color: #ffffff;
+    margin-bottom: 50px;
+  }
+  
+  .timeline::before {
+    content: '';
+    background: var(--light-primary);
+    width: 5px;
+    height: 95%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Timeline Items */
+  .timeline-item {
+    width: 100%;
+    margin-bottom: 70px;
+    position: relative;
+    opacity: 0;
+    transform: translateX(100px); /* Starting position */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-content {
+    float: right;
+    padding: 40px 30px 10px 30px;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-content .date {
+    right: auto;
+    left: 0;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-content::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    top: 30px;
+    left: -15px;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent #f5f5f5 transparent transparent;
+  }
+  
+  .timeline-item::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  .timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 10px 30px;
+    border-radius: 4px;
+    background: #f5f5f5;
+    box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
+  }
+  
+  .timeline-content::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    top: 30px;
+    right: -15px;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent #f5f5f5;
+  }
+  
+  .timeline-img {
+    width: 30px;
+    height: 30px;
+    background: var(--primary);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-top: 25px;
+    margin-left: -15px;
+  }
+  
+  /* Timeline year style */
+  .timeline .year {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInUp 0.6s ease-in-out;
+  }
+  
+  /* Animations for timeline items */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0); /* Move to normal position when visible */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  /* Hover effect for timeline content */
+  .timeline-item:hover .timeline-content {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 30px -15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Specific animation for odd and even timeline items */
+  .timeline-item:nth-child(even) .timeline-content {
+    animation: fadeInRight 0.6s ease-in-out;  /* Fade in from right for even */
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content {
+    animation: fadeInLeft 0.6s ease-in-out;  /* Fade in from left for odd */
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Mobile Responsiveness */
+  @media screen and (max-width: 768px) {
+    .timeline::before {
+      left: 50px;
+    }
+  
+    .timeline-img {
+      left: 50px;
+    }
+  
+    .timeline-content {
+      max-width: 100%;
+      width: auto;
+      margin-left: 70px;
+    }
+  
+    .timeline-item:nth-child(even) .timeline-content {
+      float: none;
+      margin-left: 0;
+    }
+  
+    .timeline-item:nth-child(odd) .timeline-content {
+      float: none;
+      margin-left: 0;
+    }
+  
+    /* Container for proper alignment */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  }
+  
+  /* Fade-in animation when an element enters the viewport */
+  .js--fadeInLeft,
+  .js--fadeInRight {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .js--fadeInLeft {
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .js--fadeInRight {
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+</style>
+      
 </head>
 
 <body>
@@ -142,7 +394,48 @@
         <!-- About Start -->
         <div class="container-fluid about py-5">
             <div class="container py-5">
-                <div class="row g-5 align-items-center">
+                <section class="timeline">
+                    <div class="container">
+                      <!-- Timeline items -->
+                      <div class="timeline-item">
+                        <div class="timeline-img"></div>
+                        <div class="timeline-content js--fadeInRight">
+                          <span class="year">1990</span>
+                          <h2>Founding</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                      </div>
+                
+                      <div class="timeline-item">
+                        <div class="timeline-img"></div>
+                        <div class="timeline-content js--fadeInLeft">
+                          <span class="year">2000</span>
+                          <h2>Growth Expansion</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                      </div>
+                
+                      <div class="timeline-item">
+                        <div class="timeline-img"></div>
+                        <div class="timeline-content js--fadeInRight">
+                          <span class="year">2010</span>
+                          <h2>Major Achievements</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                      </div>
+                
+                      <div class="timeline-item">
+                        <div class="timeline-img"></div>
+                        <div class="timeline-content js--fadeInLeft">
+                          <span class="year">2020</span>
+                          <h2>Recent Milestones</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                
+                  
                     
                     <div data-wow-delay="0.1s">
                         <div class="about-item-content">
@@ -571,6 +864,21 @@
             }
         });
     </script>
+<script>
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible'); // Add class to trigger animation
+          observer.unobserve(entry.target); // Stop observing after it becomes visible
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    timelineItems.forEach(item => observer.observe(item));
+    
+</script>
     </body>
 
 </html>
