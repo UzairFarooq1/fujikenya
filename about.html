@@ -235,34 +235,53 @@
   
   /* Mobile Responsiveness */
   @media screen and (max-width: 768px) {
+    /* Adjust the timeline container */
+    .timeline {
+      padding: 0 20px;
+    }
+  
+    /* Center the timeline items */
     .timeline::before {
-      left: 50px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   
     .timeline-img {
-      left: 50px;
+      left: 50%;
+      margin-left: -15px;
     }
   
-    .timeline-content {
-      max-width: 100%;
-      width: auto;
-      margin-left: 70px;
+    /* Stack the items vertically for mobile */
+    .timeline-item {
+      width: 100%;
+      margin-bottom: 50px;
+      transform: translateX(0); /* Reset horizontal position */
+      opacity: 1; /* Items are already in view */
     }
   
-    .timeline-item:nth-child(even) .timeline-content {
-      float: none;
+    .timeline-item .timeline-content {
+      width: 100%; /* Full width for mobile */
+      padding: 15px;
       margin-left: 0;
+    }
+  
+    /* Adjust animations for mobile */
+    .timeline-item:nth-child(even) .timeline-content {
+      animation: fadeInLeft 0.6s ease-in-out; /* Fade in from left for even on mobile */
     }
   
     .timeline-item:nth-child(odd) .timeline-content {
-      float: none;
-      margin-left: 0;
+      animation: fadeInRight 0.6s ease-in-out; /* Fade in from right for odd on mobile */
     }
   
-    /* Container for proper alignment */
+    /* Timeline header text */
+    .timeline h1 {
+      font-size: 150%;
+    }
+  
+    /* Container adjustments */
     .container {
-      max-width: 1200px;
-      margin: 0 auto;
+      max-width: 100%;
       padding: 0 20px;
     }
   }
