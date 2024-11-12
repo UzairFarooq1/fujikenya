@@ -155,15 +155,23 @@
     border-color: transparent transparent transparent #f5f5f5;
   }
   
-  .timeline-img {
-    width: 30px;
-    height: 30px;
+  .timeline-img .rightImage {
+    width: 500px;
+    height: 300px;
     background: var(--primary);
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    margin-top: 25px;
+    float: right;
+    margin-bottom: 25px;
     margin-left: -15px;
+    border-radius: 5%;
+  }
+  .timeline-img .leftImage {
+    width: 500px;
+    height: 300px;
+    background: var(--primary);
+    float: left;
+    margin-bottom: 25px;
+    margin-left: -15px;
+    border-radius: 5%;
   }
   
   /* Timeline year style */
@@ -238,6 +246,7 @@
     /* Adjust the timeline container */
     .timeline {
       padding: 0 20px;
+      position: relative;
     }
   
     /* Center the timeline items */
@@ -246,32 +255,54 @@
       transform: translateX(-50%);
     }
   
-    .timeline-img {
-      left: 50%;
-      margin-left: -15px;
+    /* Styling for timeline images */
+    .timeline-img .rightImage,
+    .timeline-img .leftImage {
+      width: 200px;
+      height: 100px;
+      background: var(--primary);
+      border-radius: 5%;
+      margin-top: 25px;
+      position: absolute;
+      left: 55%; /* Center horizontally */
+      transform: translateX(-50%); /* Adjust for exact centering */
+      z-index: 1;
+    }
+  
+    /* Position the right image above the timeline content */
+    .timeline-img .rightImage {
+      top: -60px; /* Adjust as needed to place above content */
+    }
+  
+    /* Position the left image */
+    .timeline-img .leftImage {
+      top: -60px; /* Adjust as needed for consistency */
     }
   
     /* Stack the items vertically for mobile */
     .timeline-item {
       width: 100%;
-      margin-bottom: 50px;
-      transform: translateX(0); /* Reset horizontal position */
-      opacity: 1; /* Items are already in view */
+      margin-bottom: 80px;
+      padding-top: 80px; /* Give space for image at the top */
+      transform: translateX(0);
+      opacity: 1;
+      position: relative;
     }
   
     .timeline-item .timeline-content {
-      width: 100%; /* Full width for mobile */
+      width: 100%;
       padding: 15px;
       margin-left: 0;
+      z-index: 0;
     }
   
     /* Adjust animations for mobile */
     .timeline-item:nth-child(even) .timeline-content {
-      animation: fadeInLeft 0.6s ease-in-out; /* Fade in from left for even on mobile */
+      animation: fadeInLeft 0.6s ease-in-out;
     }
   
     .timeline-item:nth-child(odd) .timeline-content {
-      animation: fadeInRight 0.6s ease-in-out; /* Fade in from right for odd on mobile */
+      animation: fadeInRight 0.6s ease-in-out;
     }
   
     /* Timeline header text */
@@ -285,6 +316,8 @@
       padding: 0 20px;
     }
   }
+  
+  
   
   /* Fade-in animation when an element enters the viewport */
   .js--fadeInLeft,
@@ -417,36 +450,51 @@
                     <div class="container">
                       <!-- Timeline items -->
                       <div class="timeline-item">
-                        <div class="timeline-img"></div>
+                        <div class="timeline-img">
+                            <img src="/img/1930.jpg" class="rightImage" alt="2014">
+                            </div>
                         <div class="timeline-content js--fadeInRight">
-                          <span class="year">1990</span>
-                          <h2>Founding</h2>
+                          <span class="year">1938</span>
+                          <h2>Established vanguard Studio</h2>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
                       </div>
-                
                       <div class="timeline-item">
-                        <div class="timeline-img"></div>
-                        <div class="timeline-content js--fadeInLeft">
-                          <span class="year">2000</span>
-                          <h2>Growth Expansion</h2>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <div class="timeline-img">
+                            <img src="/img/1986.jpg" class="leftImage" alt="1986">
                         </div>
-                      </div>
-                
-                      <div class="timeline-item">
-                        <div class="timeline-img"></div>
                         <div class="timeline-content js--fadeInRight">
-                          <span class="year">2010</span>
-                          <h2>Major Achievements</h2>
+                          <span class="year">1955</span>
+                          <h2>Partnership with Fuji Film</h2>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                      </div>
+                       
+                      <div class="timeline-item">
+                        <div class="timeline-img">
+                        <img src="/img/2014.jpg" class="rightImage" alt="2014">
+                        </div>
+                        <div class="timeline-content js--fadeInRight">
+                          <span class="year">1983</span>
+                          <h2>Fuji Kenya Limited Formed</h2>
+                          <p>
+                            Since its founding in 1981, Fuji Kenya Ltd (FKL) has represented Fuji film
+                            Japan with success, prior to that Vanguard Ltd represented Fujifilm since
+                            the 1950’s.
+                            <p>The primary goals of FKL have been to apply cutting-edge digital
+                            technology to the medical sector and offer the highest-caliber products
+                            available in East Africa, all while offering a solid service backup.
+                        </p>
+                        </p>
                         </div>
                       </div>
                 
                       <div class="timeline-item">
-                        <div class="timeline-img"></div>
+                        <div class="timeline-img">
+                            <img src="/img/2024.JPG" alt="2024" class="leftImage">
+                        </div>
                         <div class="timeline-content js--fadeInLeft">
-                          <span class="year">2020</span>
+                          <span class="year">2024</span>
                           <h2>Recent Milestones</h2>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
