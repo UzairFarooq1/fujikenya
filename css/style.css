@@ -265,7 +265,7 @@
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 18, 72, 0.7), rgba(0, 18, 72, 0.7)), url(../img/HCUS_Surgical-Imaging_banner_1921x562.png);
+    background: linear-gradient(rgba(0, 18, 72, 0.7), rgba(0, 18, 72, 0.7)), url(../img/about-us-hero.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
