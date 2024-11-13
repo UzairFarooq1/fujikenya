@@ -396,7 +396,7 @@
                         </div>
                     </div>
                     <a href="project.html" class="nav-item nav-link">Projects</a>
-                    <a href="news.html" class="nav-item nav-link">News & Updates</a> <!-- Active link for the new page -->
+                    <a href="news.html" class="nav-item nav-link">Updates</a> <!-- Active link for the new page -->
 
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
@@ -892,23 +892,39 @@
     
         const pages = [
             { title: 'Home', url: 'index.html' },
+            { title: 'News', url: 'news.html' },
             { title: 'About', url: 'about.html' },
-            { title: 'Products & Services', url: 'products.html' },
-            { title: 'Surgical Imaging', url: 'surgical_imaging.html' },
-            { title: 'Diagnostics Imaging', url: 'diagnostics_imaging.html' },
-            { title: 'Enterprise Imaging', url: 'enterprise_imaging.html' },
-            { title: 'After Sales Support', url: 'services_support.html' },
-            { title: 'Projects', url: 'project.html' },
+            { title: 'Aperto Lucent Plus', url: 'aperto_lucent_plus.html' },
             { title: 'Contact', url: 'contact.html' },
-            { title: 'Get a Quote', url: 'quote.html' }
+            { title: 'CoreVision 3D C-Arm', url: 'corevision_3D_C_arm.html' },
+            { title: 'CoreVision LD C-Arm', url: 'corevision_LD_C_arm.html' },
+            { title: 'CT', url: 'ct.html' },
+            { title: 'Diagnostics Imaging', url: 'diagnostics_imaging.html' },
+            { title: 'Digital Radiography', url: 'digital_radiography.html' },
+            { title: 'DR & RF Rooms', url: 'DR_&_RF_rooms.html' },
+            { title: 'DR Calneo Cross C-Arm', url: 'dr_calneo_cross_C_arm.html' },
+            { title: 'DR Detectors', url: 'dr_detectors.html' },
+            { title: 'Echelon Smart Plus', url: 'echelon_smart_plus.html' },
+            { title: 'Echelon Smart', url: 'echelon_smart.html' },
+            { title: 'Enterprise Imaging', url: 'enterprise_imaging.html' },
+            { title: 'Mobile DR Systems', url: 'mobile_DR_systems.html' },
+            { title: 'MRI', url: 'mri.html' },
+            { title: 'Products & Services', url: 'products.html' },
+            { title: 'Projects', url: 'project.html' },
+            { title: 'Get a Quote', url: 'quote.html' },
+            { title: 'After Sales Support', url: 'services_support.html' },
+            { title: 'Surgical C-Arm', url: 'surgical_C_Arm.html' },
+            { title: 'Surgical Imaging', url: 'surgical_imaging.html' },
+            { title: 'Ultrasound', url: 'ultrasound.html' },
+            { title: 'Velocity Oasis', url: 'velocity_oasis.html' }
         ];
     
         function showSuggestions(searchTerm) {
             const suggestionsContainer = document.getElementById('suggestions');
             suggestionsContainer.innerHTML = '';
-            
+    
             const matchingPages = pages.filter(page => page.title.toLowerCase().includes(searchTerm));
-            
+    
             if (matchingPages.length > 0 && searchTerm !== '') {
                 suggestionsContainer.style.display = 'block';
                 matchingPages.forEach(page => {

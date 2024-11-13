@@ -78,7 +78,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto pt-2 pt-lg-0">
-                    <a href="index.html" class="nav-item nav-link ">Home</a>
+                    <a href="index.html" class="nav-item nav-link">Home</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <div class="nav-item dropdown">
                         <a href="products.html" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Products & Services</a>
@@ -90,16 +90,23 @@
                         </div>
                     </div>
                     <a href="project.html" class="nav-item nav-link">Projects</a>
-                    <a href="news.html" class="nav-item nav-link active">News & Updates</a> <!-- Active link for the new page -->
+                    <a href="news.html" class="nav-item nav-link active">Updates</a> <!-- Active link for the new page -->
+
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
                 <div class="d-flex align-items-center flex-nowrap pt-3 pt-lg-0 ms-lg-2">
+                    <form class="d-flex" id="searchForm">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                        <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                        <div id="suggestions" class="list-group position-absolute" style="top: 100%; left: 500; z-index: 10; display: none; width: 200px;"></div>
+
+                    </form>
                     <a href="quote.html" class="btn btn-secondary py-2 px-4 ms-3 flex-wrap flex-sm-shrink-0" target="_blank">Get a Quote</a>
                 </div>
             </div>
         </nav>
     </div>
-    <!-- Navbar & Hero End -->
+        <!-- Navbar & Hero End -->
 
     <!-- Header Start -->
     <div class="container-fluid bg-breadcrumb">
@@ -123,47 +130,47 @@
             <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="news-item h-100 d-flex flex-column">
                     <div class="news-img">
-                        <img src="img/carousel-11.jpg" class="img-fluid w-100" alt="News Image">
+                        <img src="img/news1.png" class="img-fluid w-100" alt="News Image">
                     </div>
                     <div class="news-content text-center p-4 flex-grow-1">
-                        <a href="https://example.com/news1" target="_blank" class="d-block fs-4 my-4">Exciting Breakthrough in Radiology Technology</a>
-                        <p class="text-muted mb-4">Discover how the latest advancements in radiology are shaping the future of healthcare.</p>
+                        <a href="https://healthcaresolutions-us.fujifilm.com/blog/diagnostic-imaging/physicians-open-mri-at-neurological-associates-raises-the-bar-on-mri-scanning/" target="_blank" class="d-block fs-4 my-4">MRI Scanning</a>
+                        <p class="text-muted mb-4">Physicians Open MRI at Neurological Associates Raises the Bar on MRI Scanning</p>
                     </div>
                     <div class="text-center pb-4">
-                        <a class="btn btn-secondary py-2 px-4" href="https://example.com/news1" target="_blank">Read More</a>
+                        <a class="btn btn-secondary py-2 px-4" href="https://healthcaresolutions-us.fujifilm.com/blog/diagnostic-imaging/physicians-open-mri-at-neurological-associates-raises-the-bar-on-mri-scanning/" target="_blank">Read More</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="news-item h-100 d-flex flex-column">
                     <div class="news-img">
-                        <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="News Image">
+                        <img src="img/news2.png" class="img-fluid w-100" alt="News Image">
                     </div>
                     <div class="news-content text-center p-4 flex-grow-1">
-                        <a href="https://example.com/news2" target="_blank" class="d-block fs-4 my-4">New Features in X-ray Equipment</a>
-                        <p class="text-muted mb-4">Learn about the recent updates that make X-ray technology more efficient than ever.</p>
+                        <a href="https://healthcaresolutions-us.fujifilm.com/blog/diagnostic-imaging/multi-use-c-arm-empowers-marias-healthcare-to-provide-rural-patients-lifesaving-care/" target="_blank" class="d-block fs-4 my-4">Multi-use C-arm</a>
+                        <p class="text-muted mb-4">Multi-use C-arm Empowers Marias Healthcare to Provide Rural Patients Lifesaving Care</p>
                     </div>
                     <div class="text-center pb-4">
-                        <a class="btn btn-secondary py-2 px-4" href="https://example.com/news2" target="_blank">Read More</a>
+                        <a class="btn btn-secondary py-2 px-4" href="https://healthcaresolutions-us.fujifilm.com/blog/diagnostic-imaging/multi-use-c-arm-empowers-marias-healthcare-to-provide-rural-patients-lifesaving-care/" target="_blank">Read More</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
                 <div class="news-item h-100 d-flex flex-column">
                     <div class="news-img">
-                        <img src="img/carousel-3.jpg" class="img-fluid w-100" alt="News Image">
+                        <img src="img/news3.png" class="img-fluid w-100 " style="height: 265px;" alt="News Image">
                     </div>
                     <div class="news-content text-center p-4 flex-grow-1">
-                        <a href="https://example.com/news3" target="_blank" class="d-block fs-4 my-4">Upcoming Event on Digital Radiography</a>
-                        <p class="text-muted mb-4">Join us for an insightful event on the latest in digital radiography technology.</p>
+                        <a href="https://healthcaresolutions-us.fujifilm.com/blog/diagnostic-imaging/fujifilms-fdr-d-evo-gl-enables-low-dose-scoliosis-screening-in-children-in-yale-school-of-medicine-study/" target="_blank" class="d-block fs-4 my-4">Fujifilm’s FDR D-EVO GL</a>
+                        <p class="text-muted mb-4">Fujifilm’s FDR D-EVO GL Enables Low Dose Scoliosis Screening in Children in Yale School of Medicine Study</p>
                     </div>
                     <div class="text-center pb-4">
-                        <a class="btn btn-secondary py-2 px-4" href="https://example.com/news3" target="_blank">Read More</a>
+                        <a class="btn btn-secondary py-2 px-4" href="https://healthcaresolutions-us.fujifilm.com/blog/diagnostic-imaging/fujifilms-fdr-d-evo-gl-enables-low-dose-scoliosis-screening-in-children-in-yale-school-of-medicine-study/" target="_blank">Read More</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
-                <a class="btn btn-secondary py-3 px-5 mt-4" href="https://example.com/news" target="_blank">More News & Updates</a>
+                <a class="btn btn-secondary py-3 px-5 mt-4" href="https://healthcaresolutions-us.fujifilm.com/resources/" target="_blank">More News & Updates</a>
             </div>
         </div>
     </div>
@@ -513,23 +520,39 @@
     
         const pages = [
             { title: 'Home', url: 'index.html' },
+            { title: 'News', url: 'news.html' },
             { title: 'About', url: 'about.html' },
-            { title: 'Products & Services', url: 'products.html' },
-            { title: 'Surgical Imaging', url: 'surgical_imaging.html' },
-            { title: 'Diagnostics Imaging', url: 'diagnostics_imaging.html' },
-            { title: 'Enterprise Imaging', url: 'enterprise_imaging.html' },
-            { title: 'After Sales Support', url: 'services_support.html' },
-            { title: 'Projects', url: 'project.html' },
+            { title: 'Aperto Lucent Plus', url: 'aperto_lucent_plus.html' },
             { title: 'Contact', url: 'contact.html' },
-            { title: 'Get a Quote', url: 'quote.html' }
+            { title: 'CoreVision 3D C-Arm', url: 'corevision_3D_C_arm.html' },
+            { title: 'CoreVision LD C-Arm', url: 'corevision_LD_C_arm.html' },
+            { title: 'CT', url: 'ct.html' },
+            { title: 'Diagnostics Imaging', url: 'diagnostics_imaging.html' },
+            { title: 'Digital Radiography', url: 'digital_radiography.html' },
+            { title: 'DR & RF Rooms', url: 'DR_&_RF_rooms.html' },
+            { title: 'DR Calneo Cross C-Arm', url: 'dr_calneo_cross_C_arm.html' },
+            { title: 'DR Detectors', url: 'dr_detectors.html' },
+            { title: 'Echelon Smart Plus', url: 'echelon_smart_plus.html' },
+            { title: 'Echelon Smart', url: 'echelon_smart.html' },
+            { title: 'Enterprise Imaging', url: 'enterprise_imaging.html' },
+            { title: 'Mobile DR Systems', url: 'mobile_DR_systems.html' },
+            { title: 'MRI', url: 'mri.html' },
+            { title: 'Products & Services', url: 'products.html' },
+            { title: 'Projects', url: 'project.html' },
+            { title: 'Get a Quote', url: 'quote.html' },
+            { title: 'After Sales Support', url: 'services_support.html' },
+            { title: 'Surgical C-Arm', url: 'surgical_C_Arm.html' },
+            { title: 'Surgical Imaging', url: 'surgical_imaging.html' },
+            { title: 'Ultrasound', url: 'ultrasound.html' },
+            { title: 'Velocity Oasis', url: 'velocity_oasis.html' }
         ];
     
         function showSuggestions(searchTerm) {
             const suggestionsContainer = document.getElementById('suggestions');
             suggestionsContainer.innerHTML = '';
-            
+    
             const matchingPages = pages.filter(page => page.title.toLowerCase().includes(searchTerm));
-            
+    
             if (matchingPages.length > 0 && searchTerm !== '') {
                 suggestionsContainer.style.display = 'block';
                 matchingPages.forEach(page => {
