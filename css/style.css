@@ -255,10 +255,77 @@
 /*** Navbar End ***/
 
 /*** Single Page Hero Header Start ***/
+.bg-breadcrumb_synapse {
+    position: relative;
+    background: linear-gradient(rgba(0, 18, 72, 0.7), rgba(0, 18, 72, 0.7)), url(../img/hero_synapsevincent_01.png);
+    height: 400px;
+    overflow: hidden;
+}
+
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 18, 72, 0.7), rgba(0, 18, 72, 0.7)), url(../img/carousel-2.jpg);
+    background: linear-gradient(rgba(0, 18, 72, 0.7), rgba(0, 18, 72, 0.7)), url(../img/HCUS_Surgical-Imaging_banner_1921x562.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 60px 0;
+}
+
+.bg-breadcrumb_calneo_cross {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 18, 72, 0.7), rgba(0, 18, 72, 0.7)), url(../img/hero_calneo-cross_01.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 60px 0;
+}
+
+.bg-breadcrumb_echelon-smart-plus {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 18, 72, 0.7), rgba(0, 18, 72, 0.7)), url(../img/hero_echelon-smart-plus.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 60px 0;
+}
+
+.bg-breadcrumb_echelon-smart {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 18, 72, 0.7), rgba(0, 18, 72, 0.7)), url(../img/hero_echelon-smart_012.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 60px 0;
+}
+
+.bg-breadcrumb_ultrasound {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 18, 72, 0.7), rgba(0, 18, 72, 0.7)), url(../img/img_ultrasound_pc.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 60px 0;
+}
+
+.bg-breadcrumb_Aperto2 {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 18, 72, 0.7), rgba(0, 18, 72, 0.7)), url(../img/Aperto2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 60px 0;
+}
+
+.bg-breadcrumb_OASIS2 {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 18, 72, 0.7), rgba(0, 18, 72, 0.7)), url(../img/OASIS2.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
