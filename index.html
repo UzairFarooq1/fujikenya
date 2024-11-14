@@ -32,6 +32,126 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            .testimonials-container {
+                border: 2px solid #00a1e4;
+                background-color: #ede3e4;
+                height: 40vmin;
+                width: 40%;
+                border-radius: 20px;
+                padding: 15px;
+                margin-top: 150px;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+              
+                /* Animation properties */
+                opacity: 0;
+                transform: translate(-50%, -60%);
+                animation: fadeUp 1s ease-out forwards;
+              }
+              
+              @keyframes fadeUp {
+                from {
+                  opacity: 0;
+                  transform: translate(-50%, -60%);
+                }
+                to {
+                  opacity: 1;
+                  transform: translate(-50%, -50%);
+                }
+              }
+              
+              
+              
+              .bar {
+                content: "1";
+                height: 5px;
+                width: 0%;
+                position: absolute;
+                background: linear-gradient(90deg, red, orange);
+                bottom: 0;
+                border-radius: 20px;
+                left: 10px;
+                animation: width 5s linear infinite both;
+                z-index: 2;
+              }
+              
+              @keyframes width {
+                from {
+                  width: 0;
+                }
+                to {
+                  width: 88%;
+                }
+              }
+              
+              .circle {
+                height: 12vmin;
+                width: 12vmin;
+                border-radius: 50%;
+                background-image: url(/img/quoteUp.png);
+                background-position: left;
+                background-size: 90%;
+                background-color: darkgrey;
+                background-repeat: no-repeat;
+                position: absolute;
+                z-index: 10;
+              }
+              
+              .first {
+                top: -40px;
+                left: 15px;
+              }
+              
+              .second {
+                bottom: -35px;
+                right: 15px;
+                transform: rotate(180deg);
+              }
+              
+              .text {
+                text-align: center;
+                margin-top: 30px;
+              }
+              
+              .details > p {
+                text-align: center;
+              }
+              
+              .profile {
+                border: 5px double #00a1e4;
+                border-radius: 50%;
+                position: absolute;
+                top: -50px;
+              }
+              
+              .name {
+                font-weight: 900;
+                font-size: calc(10px + 1vmin);
+              }
+              
+              .city {
+                font-size: calc(10px + 1vmin);
+              }
+              
+              @keyframes translate {
+                from {
+                  transform: translateY(10px);
+                  opacity: 0;
+                }
+                to {
+                  transform: translateY(0);
+                  opacity: 1;
+                }
+              }
+        </style>
     </head>
 
     <body>
@@ -521,6 +641,18 @@
             </div>
         </div>
         <!-- Projects End -->
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <p class="text-uppercase text-secondary fs-5 mb-0">Testimonials</p>
+            <h2 class="display-4 text-capitalize mb-3">Our clients reviews.</h2>
+        <section class="testimonials-container">
+            <div class="circle first"></div>
+            <div class="circle second"></div>
+            <div class="bar"></div>
+            <img alt="profile" height="90" width="90" class="profile" />
+            <div class="text"></div>
+            <div class="details"></div>
+          </section>
+          </div>
 
         <!-- Testimonial Start -->
         <div class="container-fluid testimonial pb-5">
@@ -814,6 +946,61 @@
                     document.getElementById('suggestions').style.display = 'none';
                 }
             });
+        </script>
+
+        <script>
+            const customers = [
+  {
+    name: "Dr. John Mwangi",
+    image: "img/tnh_logo.jpeg",
+    location: "Chief Medical Officer, Nairobi General Hospital",
+    testimonial: "We recently acquired advanced medical equipment from Fuji Kenya, and the experience has been exceptional. We highly recommend Fuji Kenya for their reliability and dedication to advancing healthcare.",
+  },
+  {
+    name: "Dr. Aisha Njeri",
+    image: "img/mbs_hosp_logo.jpeg",
+    location: "Head of Radiology, Mombasa Medical Center",
+    testimonial: "Fuji Kenya has transformed our practice with their state-of-the-art medical equipment. Their support extends beyond the sale, ensuring we deliver the best care to our patients.",
+  },
+  {
+    name: "Dr. Samuel Otieno",
+    image: "img/ksm_logo.jpeg",
+    location: "Director of Cardiology, Kisumu Heart Institute",
+    testimonial: "Our partnership with Fuji Kenya has been instrumental in modernizing our medical facilities. Fuji Kenya's team is always available to assist with any inquiries, ensuring we maintain optimal performance in our operations.",
+  },
+];
+
+let count = 0;
+setInterval(() => {
+  if (count === customers.length - 1) {
+    count = 0;
+  } else {
+    count++;
+  }
+  change();
+}, 4800);
+
+let profile = document.querySelector(".profile");
+let testimonial = document.querySelector(".text");
+let details = document.querySelector(".details");
+
+function change() {
+  profile.style.animation = "none"; // Reset the animation
+  testimonial.style.animation = "none"; // Reset the animation
+  details.style.animation = "none"; // Reset the animation
+  profile.offsetHeight; // Trigger reflow
+
+  profile.setAttribute("src", customers[count].image);
+  testimonial.innerText = customers[count].testimonial;
+  details.innerHTML = `<p class="name">${customers[count].name}</p>
+                         <p class="city">${customers[count].location}</p>`;
+
+  profile.style.animation = "translate 0.75s 1 ease-in forwards";
+  testimonial.style.animation = "translate 0.75s 1 ease-in forwards";
+  details.style.animation = "translate 0.75s 1 ease-in forwards";
+}
+
+change();
         </script>
         
     </body>
