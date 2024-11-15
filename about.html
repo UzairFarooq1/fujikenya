@@ -267,8 +267,7 @@
             }
             
             /* Styling for timeline images */
-            .timeline-img .rightImage,
-            .timeline-img .leftImage {
+            .timeline-img .rightImage{
                 width: 100%;  /* Match parent container width */
                 height: auto;  /* Maintain aspect ratio */
                 background: var(--primary);
@@ -283,17 +282,28 @@
                 z-index: 1;
             }
             
+            .timeline-img .leftImage {
+                width: 100%;  /* Match parent container width */
+                height: auto;  /* Maintain aspect ratio */
+                border-top-left-radius: 5%;
+                border-top-right-radius: 5%;
+                border-bottom-left-radius: 0%;
+                border-bottom-right-radius: 0%;
+                margin-top: 25px;
+                margin-left: 0px;
+                margin-bottom: 0px;
+                position: relative;  /* Changed to relative */
+                left: 0;  /* Reset left position */
+                transform: none;  /* Remove transform */
+                z-index: 1;
+            }
+            
             /* Position the images */
             .timeline-img {
                 width: 100%;  /* Full width container */
                 position: relative;
             }
-            
-            .timeline-img .rightImage,
-            .timeline-img .leftImage {
-                top: 0;  /* Reset top position */
-                margin-bottom: 15px;  /* Add space between image and content */
-            }
+        
             
             /* Stack the items vertically for mobile */
             .timeline-item {
