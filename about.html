@@ -265,20 +265,26 @@
                 left: 50%;
                 transform: translateX(-50%);
             }
+                        /* Position the images */
+            .timeline-img {
+                width: 100%;  /* Full width container */
+                position: relative;
+            }
             
             /* Styling for timeline images */
-            .timeline-img .rightImage{
+            .timeline-img .rightImage {
                 width: 100%;  /* Match parent container width */
                 height: auto;  /* Maintain aspect ratio */
-                background: var(--primary);
+                /* Removed background property but kept margin */
                 border-top-left-radius: 5%;
                 border-top-right-radius: 5%;
                 border-bottom-left-radius: 0%;
                 border-bottom-right-radius: 0%;
-                margin-top: 25px;
-                position: relative;  /* Changed to relative */
-                left: 0;  /* Reset left position */
-                transform: none;  /* Remove transform */
+                margin-top: 0px;  /* Kept the margin-top */
+                margin-bottom: 25px;
+                position: relative;
+                left: 0;
+                transform: none;
                 z-index: 1;
             }
             
@@ -289,7 +295,7 @@
                 border-top-right-radius: 5%;
                 border-bottom-left-radius: 0%;
                 border-bottom-right-radius: 0%;
-                margin-top: 25px;
+                margin-top: 0px;
                 margin-left: 0px;
                 margin-bottom: 0px;
                 position: relative;  /* Changed to relative */
@@ -298,11 +304,7 @@
                 z-index: 1;
             }
             
-            /* Position the images */
-            .timeline-img {
-                width: 100%;  /* Full width container */
-                position: relative;
-            }
+
         
             
             /* Stack the items vertically for mobile */
@@ -318,9 +320,9 @@
             
             .timeline-item .timeline-content {
                 width: 100%;
-                padding: 15px;
                 margin-left: 0;
                 margin-top: 0;  /* Removed extra margin */
+                margin-bottom: 25px;
                 z-index: 0;
             }
             
