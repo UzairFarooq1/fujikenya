@@ -270,10 +270,13 @@
             /* Styling for timeline images */
             .timeline-img .rightImage,
             .timeline-img .leftImage {
-                width: 200px;
-                height: 100px;
+                width: 310px;
+                height: 150px;
                 background: var(--primary);
-                border-radius: 5%;
+                border-top-left-radius: 5%;
+                border-top-right-radius: 5%;
+                border-bottom-left-radius: 0%;
+                border-bottom-right-radius: 0%;
                 margin-top: 25px;
                 position: absolute;
                 left: 55%;
@@ -300,6 +303,7 @@
                 width: 100%;
                 margin-bottom: 80px;
                 padding-top: 80px;
+                gap: 80px;
                 /* Give space for image at the top */
                 transform: translateX(0);
                 opacity: 1;
@@ -310,6 +314,7 @@
                 width: 100%;
                 padding: 15px;
                 margin-left: 0;
+                margin-top: 25px;
                 z-index: 0;
             }
 
@@ -476,16 +481,11 @@
     <!-- Header End -->
 
     <!-- About Start -->
-    <div class="container-fluid about py-5">
-        <div class="container py-5">
-            <h1 class="text-uppercase text-secondary fs-5 text-center ">Strategic Milestone Timeline</h1>
-
-
-            <section class="timeline">
+                 <section class="timeline">
                 <div class="container">
                     <!-- Timeline items -->
 
-                    <div class="timeline-item">
+                    <div class="timeline-item" style="margin-top: 150px;">
                         <div class="timeline-img">
                             <img src="https://raw.githubusercontent.com/UzairFarooq1/fujikenya/refs/heads/main/img/timeline1.jpg"
                                 class="rightImage" alt="2014">
@@ -541,6 +541,12 @@
                     </div>
                 </div>
             </section>
+    <div class="container-fluid about py-5">
+        <div class="container py-5">
+            <h1 class="text-uppercase text-secondary fs-5 text-center ">Strategic Milestone Timeline</h1>
+
+
+
 
 
 

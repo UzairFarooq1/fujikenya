@@ -34,44 +34,77 @@
         <link href="css/style.css" rel="stylesheet">
 
         <style>
+            .testimonials-header {
+                text-align: center;
+                padding: 1rem;
+                margin-bottom: 2rem;
+            }
+    
+            .text-secondary {
+                color: #6c757d;
+                font-size: 1rem;
+                text-transform: uppercase;
+                margin-bottom: 0.5rem;
+            }
+    
+            @media (max-width: 768px) {
+                .text-secondary {
+                    font-size: 0.875rem;
+                }
+            }
+    
+            .display-4 {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+    
+            @media (max-width: 768px) {
+                .display-4 {
+                    font-size: 1.75rem;
+                }
+            }
+    
             .testimonials-container {
                 border: 2px solid #00a1e4;
                 background-color: #ede3e4;
-                height: 40vmin;
-                width: 40%;
+                width: 90%;
+                max-width: 600px;
                 border-radius: 20px;
-                padding: 15px;
-                margin-top: 200px;
+                padding: 2rem 1rem;
+                margin: 100px auto;
                 position: relative;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
-              
+                min-height: 200px;
+                
                 /* Animation properties */
                 opacity: 0;
-                transform: translate(-50%, -60%);
                 animation: fadeUp 1s ease-out forwards;
-              }
-              
-              @keyframes fadeUp {
+            }
+    
+            @media (max-width: 768px) {
+                .testimonials-container {
+                    width: 95%;
+                    padding: 1.5rem 1rem;
+                    margin: 80px auto;
+                }
+            }
+    
+            @keyframes fadeUp {
                 from {
-                  opacity: 0;
-                  transform: translate(-50%, -60%);
+                    opacity: 0;
+                    transform: translateY(20px);
                 }
                 to {
-                  opacity: 1;
-                  transform: translate(-50%, -50%);
+                    opacity: 1;
+                    transform: translateY(0);
                 }
-              }
-              
-              
-              
-              .bar {
-                content: "1";
+            }
+    
+            .bar {
                 height: 5px;
                 width: 0%;
                 position: absolute;
@@ -79,78 +112,127 @@
                 bottom: 0;
                 border-radius: 20px;
                 left: 10px;
-                animation: width 5s linear infinite both;
+                right: 10px;
+                animation: width 4.8s linear infinite;
                 z-index: 2;
-              }
-              
-              @keyframes width {
+            }
+    
+            @keyframes width {
                 from {
-                  width: 0;
+                    width: 0;
                 }
                 to {
-                  width: 88%;
+                    width: calc(100% - 20px);
                 }
-              }
-              
-              .circle {
-                height: 12vmin;
-                width: 12vmin;
+            }
+    
+            .circle {
+                height: 60px;
+                width: 60px;
                 border-radius: 50%;
-                background-image: url(https://github.com/UzairFarooq1/fujikenya/blob/main/img/quoteUp.png?raw=true);
-                background-position: left;
-                background-size: 90%;
+                background-image: url(https://github.com/UzairFarooq1/fujikenya/blob/main/img/quoteUp.png?raw=true);       
                 background-color: darkgrey;
                 background-repeat: no-repeat;
+                background-size: 60%;
+                background-position: center;
                 position: absolute;
                 z-index: 10;
-              }
-              
-              .first {
-                top: -40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                color: white;
+            }
+    
+            @media (max-width: 768px) {
+                .circle {
+                    height: 40px;
+                    width: 40px;
+                    font-size: 1.5rem;
+                }
+            }
+    
+            .first {
+                top: -30px;
                 left: 15px;
-              }
-              
-              .second {
-                bottom: -35px;
+            }
+    
+            .second {
+                bottom: -30px;
                 right: 15px;
                 transform: rotate(180deg);
-              }
-              
-              .text {
+            }
+    
+            .text {
                 text-align: center;
-                margin-top: 30px;
-              }
-              
-              .details > p {
+                margin: 1rem 0;
+                font-size: 1rem;
+                line-height: 1.6;
+                padding: 0 1rem;
+            }
+    
+            @media (max-width: 768px) {
+                .text {
+                    font-size: 0.9rem;
+                    padding: 0 0.5rem;
+                }
+            }
+    
+            .details {
                 text-align: center;
-              }
-              
-              .profile {
+                width: 100%;
+            }
+    
+            .profile {
                 border: 5px double #00a1e4;
                 border-radius: 50%;
                 position: absolute;
-                top: -50px;
-              }
-              
-              .name {
+                top: -45px;
+                width: 90px;
+                height: 90px;
+                object-fit: cover;
+            }
+    
+            @media (max-width: 768px) {
+                .profile {
+                    width: 70px;
+                    height: 70px;
+                    top: -35px;
+                    border-width: 3px;
+                }
+            }
+    
+            .name {
                 font-weight: 900;
-                font-size: calc(10px + 1vmin);
-              }
-              
-              .city {
-                font-size: calc(10px + 1vmin);
-              }
-              
-              @keyframes translate {
+                font-size: 1.1rem;
+                margin: 0.5rem 0;
+            }
+    
+            .city {
+                font-size: 0.9rem;
+                color: #666;
+                margin: 0.25rem 0;
+            }
+    
+            @media (max-width: 768px) {
+                .name {
+                    font-size: 1rem;
+                }
+                .city {
+                    font-size: 0.8rem;
+                }
+            }
+    
+            @keyframes translate {
                 from {
-                  transform: translateY(10px);
-                  opacity: 0;
+                    transform: translateY(10px);
+                    opacity: 0;
                 }
                 to {
-                  transform: translateY(0);
-                  opacity: 1;
+                    transform: translateY(0);
+                    opacity: 1;
                 }
-              }
+            }
         </style>
     </head>
 
