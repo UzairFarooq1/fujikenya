@@ -34,6 +34,54 @@
         <link href="css/style.css" rel="stylesheet">
 
         <style>
+            .nav-btn {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: #00a1e4;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                z-index: 20;
+                outline: none;
+                transition: background-color 0.3s ease;
+            }
+            
+            .nav-btn:hover {
+                background-color: #007bb5;
+            }
+            
+            .prev-btn {
+                left: -20px;
+            }
+            
+            .next-btn {
+                right: -20px;
+            }
+            
+            @media (max-width: 768px) {
+                .nav-btn {
+                    width: 30px;
+                    height: 30px;
+                    font-size: 1.2rem;
+                }
+            
+                .prev-btn {
+                    left: -10px;
+                }
+            
+                .next-btn {
+                    right: -10px;
+                }
+            }
+            
             .testimonials-header {
                 text-align: center;
                 padding: 1rem;
@@ -763,18 +811,20 @@
         <!-- Projects End -->
 
         
-        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" >
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s">
             <p class="text-uppercase text-secondary fs-5 mb-0">Testimonials</p>
-            <h2 class="display-4 text-capitalize mb-3">Our clients reviews.</h2>
-        <section class="testimonials-container">
-            <div class="circle first"></div>
-            <div class="circle second"></div>
-            <div class="bar"></div>
-            <img alt="profile" height="90" width="90" class="profile" />
-            <div class="text"></div>
-            <div class="details"></div>
-          </section>
-          </div>
+            <h2 class="display-4 text-capitalize mb-3">Our clients' reviews.</h2>
+            <section class="testimonials-container">
+                <div class="circle first"></div>
+                <div class="circle second"></div>
+                <img alt="profile" height="90" width="90" class="profile" />
+                <div class="text"></div>
+                <div class="details"></div>
+                <button class="nav-btn prev-btn">❮</button>
+                <button class="nav-btn next-btn">❯</button>
+            </section>
+        </div>
+        
 
         <!-- Testimonial Start -->
         <!-- <div class="container-fluid testimonial pb-5">
@@ -1071,57 +1121,58 @@
 
         <script>
             const customers = [
-  {
-    name: "Dr. John Mwangi",
-    image: "img/tnh_logo.jpeg",
-    location: "Chief Medical Officer, Nairobi General Hospital",
-    testimonial: "We recently acquired advanced medical equipment from Fuji Kenya, and the experience has been exceptional. We highly recommend Fuji Kenya for their reliability and dedication to advancing healthcare.",
-  },
-  {
-    name: "Dr. Aisha Njeri",
-    image: "img/mbs_hosp_logo.jpeg",
-    location: "Head of Radiology, Mombasa Medical Center",
-    testimonial: "Fuji Kenya has transformed our practice with their state-of-the-art medical equipment. Their support extends beyond the sale, ensuring we deliver the best care to our patients.",
-  },
-  {
-    name: "Dr. Samuel Otieno",
-    image: "img/ksm_logo.jpeg",
-    location: "Director of Cardiology, Kisumu Heart Institute",
-    testimonial: "Our partnership with Fuji Kenya has been instrumental in modernizing our medical facilities. Fuji Kenya's team is always available to assist with any inquiries, ensuring we maintain optimal performance in our operations.",
-  },
-];
-
-let count = 0;
-setInterval(() => {
-  if (count === customers.length - 1) {
-    count = 0;
-  } else {
-    count++;
-  }
-  change();
-}, 8500);
-
-let profile = document.querySelector(".profile");
-let testimonial = document.querySelector(".text");
-let details = document.querySelector(".details");
-
-function change() {
-  profile.style.animation = "none"; // Reset the animation
-  testimonial.style.animation = "none"; // Reset the animation
-  details.style.animation = "none"; // Reset the animation
-  profile.offsetHeight; // Trigger reflow
-
-  profile.setAttribute("src", customers[count].image);
-  testimonial.innerText = customers[count].testimonial;
-  details.innerHTML = `<p class="name">${customers[count].name}</p>
-                         <p class="city">${customers[count].location}</p>`;
-
-  profile.style.animation = "translate 0.75s 1 ease-in forwards";
-  testimonial.style.animation = "translate 0.75s 1 ease-in forwards";
-  details.style.animation = "translate 0.75s 1 ease-in forwards";
-}
-
-change();
+            {
+                name: "Dr. John Mwangi",
+                image: "img/tnh_logo.jpeg",
+                location: "Chief Medical Officer, Nairobi General Hospital",
+                testimonial: "We recently acquired advanced medical equipment from Fuji Kenya, and the experience has been exceptional. We highly recommend Fuji Kenya for their reliability and dedication to advancing healthcare.",
+            },
+            {
+                name: "Dr. Aisha Njeri",
+                image: "img/mbs_hosp_logo.jpeg",
+                location: "Head of Radiology, Mombasa Medical Center",
+                testimonial: "Fuji Kenya has transformed our practice with their state-of-the-art medical equipment. Their support extends beyond the sale, ensuring we deliver the best care to our patients.",
+            },
+            {
+                name: "Dr. Samuel Otieno",
+                image: "img/ksm_logo.jpeg",
+                location: "Director of Cardiology, Kisumu Heart Institute",
+                testimonial: "Our partnership with Fuji Kenya has been instrumental in modernizing our medical facilities. Fuji Kenya's team is always available to assist with any inquiries, ensuring we maintain optimal performance in our operations.",
+            },
+        ];
+        
+        let count = 0;
+        
+        const profile = document.querySelector(".profile");
+        const testimonial = document.querySelector(".text");
+        const details = document.querySelector(".details");
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+        
+        function updateTestimonial() {
+            profile.setAttribute("src", customers[count].image);
+            testimonial.innerText = customers[count].testimonial;
+            details.innerHTML = `<p class="name">${customers[count].name}</p>
+                                 <p class="city">${customers[count].location}</p>`;
+            // Animation reset
+            profile.style.animation = "translate 0.75s ease-in forwards";
+            testimonial.style.animation = "translate 0.75s ease-in forwards";
+            details.style.animation = "translate 0.75s ease-in forwards";
+        }
+        
+        nextBtn.addEventListener("click", () => {
+            count = (count + 1) % customers.length; // Loop to the first testimonial
+            updateTestimonial();
+        });
+        
+        prevBtn.addEventListener("click", () => {
+            count = (count - 1 + customers.length) % customers.length; // Loop to the last testimonial
+            updateTestimonial();
+        });
+        
+        // Initialize the first testimonial
+        updateTestimonial();
+        
         </script>
         
     </body>
