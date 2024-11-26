@@ -32,6 +32,256 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #00a1e4;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 20;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background-color: #007bb5;
+        }
+        
+        .prev-btn {
+            left: -20px;
+        }
+        
+        .next-btn {
+            right: -20px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-btn {
+                width: 30px;
+                height: 30px;
+                font-size: 1.2rem;
+            }
+        
+            .prev-btn {
+                left: -10px;
+            }
+        
+            .next-btn {
+                right: -10px;
+            }
+        }
+        
+        .testimonials-header {
+            text-align: center;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .text-secondary {
+            color: #6c757d;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .text-secondary {
+                font-size: 0.875rem;
+            }
+        }
+
+        .display-4 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .display-4 {
+                font-size: 1.75rem;
+            }
+        }
+
+        .testimonials-container {
+            border: 2px solid #00a1e4;
+            background-color: #ede3e4;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 20px;
+            padding: 2rem 1rem;
+            margin: 100px auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            min-height: 200px;
+            
+            /* Animation properties */
+            opacity: 0;
+            animation: fadeUp 1s ease-out forwards;
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-container {
+                width: 95%;
+                padding: 1.5rem 1rem;
+                margin: 80px auto;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .bar {
+            height: 5px;
+            width: 0%;
+            position: absolute;
+            background: linear-gradient(90deg, red, orange);
+            bottom: 0;
+            border-radius: 20px;
+            left: 10px;
+            right: 10px;
+            animation: width 8.8s linear infinite;
+            z-index: 2;
+        }
+
+        @keyframes width {
+            from {
+                width: 0;
+            }
+            to {
+                width: calc(100% - 20px);
+            }
+        }
+
+        .circle {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background-image: url(https://github.com/UzairFarooq1/fujikenya/blob/main/img/quoteUp.png?raw=true);       
+            background-color: darkgrey;
+            background-repeat: no-repeat;
+            background-size: 60%;
+            background-position: center;
+            position: absolute;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .circle {
+                height: 40px;
+                width: 40px;
+                font-size: 1.5rem;
+            }
+        }
+
+        .first {
+            top: -30px;
+            left: 15px;
+        }
+
+        .second {
+            bottom: -30px;
+            right: 15px;
+            transform: rotate(180deg);
+        }
+
+        .text {
+            text-align: center;
+            margin: 1rem 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .text {
+                font-size: 0.9rem;
+                padding: 0 0.5rem;
+            }
+        }
+
+        .details {
+            text-align: center;
+            width: 100%;
+        }
+
+        .profile {
+            border: 5px double #00a1e4;
+            border-radius: 50%;
+            position: absolute;
+            top: -45px;
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .profile {
+                width: 70px;
+                height: 70px;
+                top: -35px;
+                border-width: 3px;
+            }
+        }
+
+        .name {
+            font-weight: 900;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+
+        .city {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0.25rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .name {
+                font-size: 1rem;
+            }
+            .city {
+                font-size: 0.8rem;
+            }
+        }
+
+        @keyframes translate {
+            from {
+                transform: translateY(10px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -285,7 +535,7 @@
         <!-- Fact Counter -->
 
         <!-- Testimonial Start -->
-        <div class="container-fluid testimonial pb-5">
+        <!-- <div class="container-fluid testimonial pb-5">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <p class="text-uppercase text-secondary fs-5 mb-0">Testimonials</p>
@@ -369,8 +619,22 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Testimonial End -->
+
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s">
+            <p class="text-uppercase text-secondary fs-5 mb-0">Testimonials</p>
+            <h2 class="display-4 text-capitalize mb-3">Our clients' reviews.</h2>
+            <section class="testimonials-container">
+                <div class="circle first"></div>
+                <div class="circle second"></div>
+                <img alt="profile" height="90" width="90" class="profile" />
+                <div class="text"></div>
+                <div class="details"></div>
+                <button class="nav-btn prev-btn">❮</button>
+                <button class="nav-btn next-btn">❯</button>
+            </section>
+        </div>
 
         <!-- Footer Start -->
         <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
@@ -576,6 +840,62 @@
             }
         });
     </script>
+    <script>
+        const customers = [
+        {
+            name: "Dr. John Mwangi",
+            image: "img/tnh_logo.jpeg",
+            location: "Chief Medical Officer, Nairobi General Hospital",
+            testimonial: "We recently acquired advanced medical equipment from Fuji Kenya, and the experience has been exceptional. We highly recommend Fuji Kenya for their reliability and dedication to advancing healthcare.",
+        },
+        {
+            name: "Dr. Aisha Njeri",
+            image: "img/mbs_hosp_logo.jpeg",
+            location: "Head of Radiology, Mombasa Medical Center",
+            testimonial: "Fuji Kenya has transformed our practice with their state-of-the-art medical equipment. Their support extends beyond the sale, ensuring we deliver the best care to our patients.",
+        },
+        {
+            name: "Dr. Samuel Otieno",
+            image: "img/ksm_logo.jpeg",
+            location: "Director of Cardiology, Kisumu Heart Institute",
+            testimonial: "Our partnership with Fuji Kenya has been instrumental in modernizing our medical facilities. Fuji Kenya's team is always available to assist with any inquiries, ensuring we maintain optimal performance in our operations.",
+        },
+    ];
+    
+    let count = 0;
+    
+    const profile = document.querySelector(".profile");
+    const testimonial = document.querySelector(".text");
+    const details = document.querySelector(".details");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+    
+    function updateTestimonial() {
+        profile.setAttribute("src", customers[count].image);
+        testimonial.innerText = customers[count].testimonial;
+        details.innerHTML = `<p class="name">${customers[count].name}</p>
+                             <p class="city">${customers[count].location}</p>`;
+        // Animation reset
+        profile.style.animation = "translate 0.75s ease-in forwards";
+        testimonial.style.animation = "translate 0.75s ease-in forwards";
+        details.style.animation = "translate 0.75s ease-in forwards";
+    }
+    
+    nextBtn.addEventListener("click", () => {
+        count = (count + 1) % customers.length; // Loop to the first testimonial
+        updateTestimonial();
+    });
+    
+    prevBtn.addEventListener("click", () => {
+        count = (count - 1 + customers.length) % customers.length; // Loop to the last testimonial
+        updateTestimonial();
+    });
+    
+    // Initialize the first testimonial
+    updateTestimonial();
+    
+    </script>
+
     </body>
 
 </html>
